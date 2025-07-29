@@ -1,12 +1,11 @@
-/* --- Global Styles & Variables --- */
+/* --- Global Styles & Variables (New Black, White & Green Theme) --- */
 :root {
-    --primary-color: #3498db; /* A professional blue */
-    --secondary-color: #2c3e50; /* Dark blue-grey for text */
-    --background-color: #f4f7f6; /* Light grey background */
-    --surface-color: #ffffff; /* White for cards and surfaces */
-    --accent-color: #e74c3c; /* An accent color for highlights */
-    --text-color: #333;
-    --border-color: #e0e0e0;
+    --primary-color: #27ae60;     /* Professional Green for accents */
+    --secondary-color: #222222;    /* Very Dark Grey / Near Black for headings */
+    --background-color: #f5f5f5;  /* Light Grey background */
+    --surface-color: #ffffff;     /* Pure White for cards and surfaces */
+    --text-color: #333333;        /* Dark Grey for body text */
+    --border-color: #e0e0e0;      /* Light Grey for borders */
 }
 
 * {
@@ -20,7 +19,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.7;
@@ -33,14 +32,14 @@ body {
 }
 
 h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
-    color: var(--secondary-color);
     line-height: 1.2;
     margin-bottom: 1rem;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.2rem; border-bottom: 3px solid var(--primary-color); padding-bottom: 0.5rem; margin-bottom: 2rem; display: inline-block; }
+h1 { font-size: 3rem; color: white; }
+h2 { font-size: 2.2rem; color: var(--secondary-color); border-bottom: 3px solid var(--primary-color); padding-bottom: 0.5rem; margin-bottom: 2rem; display: inline-block; }
 h3 { font-size: 1.4rem; color: var(--primary-color); }
 
 p {
@@ -103,7 +102,8 @@ nav {
 
 /* --- Header --- */
 header {
-    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('background.jpeg') center/cover no-repeat;
+    /* The dark overlay is now based on our new black/grey color */
+    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url('AI.jpg') center/cover no-repeat;
     color: white;
     height: 100vh;
     display: flex;
@@ -116,7 +116,6 @@ header {
     max-width: 800px;
 }
 
-.header-container h1 { color: white; }
 .header-container h2 { border: none; color: rgba(255, 255, 255, 0.9); font-weight: 300; }
 .location {
     font-size: 1.1rem;
@@ -127,7 +126,7 @@ header {
     color: white;
     font-size: 1.8rem;
     margin: 0 0.75rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
@@ -241,9 +240,9 @@ header {
     gap: 2rem;
 }
 .skill-category {
-    flex: 1 1 300px; /* Flexbox for responsive columns */
+    flex: 1 1 300px;
 }
-.skill-category h3 { border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+.skill-category h3 { color: var(--secondary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem; }
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
@@ -251,8 +250,9 @@ header {
 }
 
 .skill-tags span {
-    background-color: #eaf2f8;
-    color: var(--primary-color);
+    /* Updated skill tag colors to fit the new theme */
+    background-color: #e6e6e6; 
+    color: var(--secondary-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
