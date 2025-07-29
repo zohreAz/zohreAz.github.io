@@ -9,16 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="container nav-container">
-            <a href="#" class="nav-logo">Zohreh Azizollahi</a>
-            <ul class="nav-links">
+            <a href="#home" class="nav-logo">Zohreh Azizollahi</a>
+            <ul class="nav-links" id="main-nav">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -36,7 +34,7 @@
             <div class="social-links">
                 <a href="mailto:zohre.azizollahy@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/azizollahy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/zohreAz" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a> <!-- Replace with your GitHub profile -->
+                <a href="https://github.com/zohreAz" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </header>
@@ -44,8 +42,8 @@
     <main>
         <section id="about">
             <div class="container">
-                <h2><i class="fas fa-user"></i> About Me</h2>
-                <p>
+                <h2 data-animation="fade-up"><i class="fas fa-user"></i> About Me</h2>
+                <p data-animation="fade-up">
                     I am a results-driven Machine Learning Engineer with a Master's degree in Computer Engineering and a strong foundation in building end-to-end AI systems. My expertise lies in Natural Language Processing, particularly in developing Retrieval-Augmented Generation (RAG) systems and domain-specific Knowledge Graphs. I am passionate about leveraging LLMs and advanced ML models to solve complex problems, from optimizing legal text analysis to forecasting financial transactions. I thrive on architecting scalable data pipelines and continuously exploring emerging technologies to drive innovation and efficiency.
                 </p>
             </div>
@@ -53,10 +51,9 @@
 
         <section id="experience">
             <div class="container">
-                <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <h2 data-animation="fade-up"><i class="fas fa-briefcase"></i> Work Experience</h2>
                 <div class="timeline">
-                    
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-animation="fade-right">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2023 – Present</div>
                         <div class="timeline-content">
@@ -64,78 +61,60 @@
                             <p class="company">Diako, Tehran, Iran</p>
                             <ul>
                                 <li>Designed and deployed an end-to-end Retrieval-Augmented Generation (RAG) system for processing Persian legal documents.</li>
-                                <li>Architected data pipelines for automated ingestion and semantic chunking, reducing manual processing time by 95%.</li>
-                                <li>Boosted query accuracy by 30% through a context-aware query reformulation module and a hybrid search strategy (dense + sparse) using Reciprocal Rank Fusion.</li>
-                                <li>Built a domain-specific Knowledge Graph, automating NER and relation extraction with LLMs (LLaMA 3.1, Gemini), reducing manual annotation by 98%.</li>
-                                <li>Fine-tuned custom models, improving F1-score by 20% to 0.92, and used Neo4j to extract influence patterns.</li>
+                                <li>Architected data pipelines, reducing manual processing time by 95%.</li>
+                                <li>Boosted query accuracy by 30% with a hybrid search strategy.</li>
+                                <li>Built a domain-specific Knowledge Graph, automating NER with LLMs.</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-animation="fade-right">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2021 – 2023</div>
                         <div class="timeline-content">
                             <h3>Data Scientist</h3>
                             <p class="company">Saman Electronic Payment (SEP), Tehran, Iran</p>
                             <ul>
-                                <li>Developed forecasting models with 92% accuracy to predict daily transactions, optimizing infrastructure and campaigns.</li>
-                                <li>Implemented customer segmentation, increasing marketing ROI by 17% by identifying high-value groups.</li>
-                                <li>Automated ETL pipelines and reporting, saving 10+ hours/week and cutting manual errors by 85%.</li>
+                                <li>Developed forecasting models with 92% accuracy to predict daily transactions.</li>
+                                <li>Implemented customer segmentation, increasing marketing ROI by 17%.</li>
+                                <li>Automated ETL pipelines, saving 10+ hours/week.</li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-animation="fade-right">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">Fall 2022</div>
                         <div class="timeline-content">
                             <h3>Data Scientist Intern</h3>
                             <p class="company">Hamrahe Aval (MCI), Tehran, Iran</p>
                             <ul>
-                                <li>Built a real-time voice trigger detection model using RNNs with 94% accuracy on 300,000+ samples.</li>
-                                <li>Conducted sentiment classification on 100,000+ user comments with 89% accuracy across 3 classes.</li>
+                                <li>Built a real-time voice trigger detection model with 94% accuracy.</li>
+                                <li>Conducted sentiment classification on 100,000+ comments.</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2020 – 2021</div>
-                        <div class="timeline-content">
-                            <h3>Full Stack Developer</h3>
-                            <p class="company">TabanSoft, Isfahan, Iran</p>
-                            <ul>
-                                <li>Developed modular accounting software used by 1,000+ clients, enhancing user experience and system performance.</li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
         <section id="education">
             <div class="container">
-                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <h2 data-animation="fade-up"><i class="fas fa-graduation-cap"></i> Education</h2>
                  <div class="timeline">
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-animation="fade-right">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">Aug 2021</div>
                         <div class="timeline-content">
                             <h3>Master of Science in Computer Engineering</h3>
                             <p class="company">Tehran University, Tehran, Iran</p>
-                            <p><strong>GPA:</strong> 17.9/20</p>
                             <p><strong>Thesis:</strong> Deep Learning-Based Spine Segmentation in MRI Images.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-animation="fade-right">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">Sep 2015</div>
                         <div class="timeline-content">
                             <h3>Bachelor of Science in Medical Engineering</h3>
                             <p class="company">Hamedan University of Technology, Hamedan, Iran</p>
-                            <p>Bioelectrical Engineering</p>
                         </div>
                     </div>
                 </div>
@@ -144,17 +123,17 @@
 
         <section id="projects">
             <div class="container">
-                <h2><i class="fas fa-flask"></i> Freelance Projects & Research</h2>
+                <h2 data-animation="fade-up"><i class="fas fa-flask"></i> Freelance Projects & Research</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <div class="project-card" data-animation="zoom-in">
                         <h3>Watermark Detection</h3>
                         <p>Created a CNN model to detect watermarks in product images with 87% precision on 100K+ items.</p>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-animation="zoom-in" style="transition-delay: 100ms;">
                         <h3>Product Classification</h3>
-                        <p>Applied transfer learning to classify 8,000+ e-commerce images for Digikala, achieving 92% accuracy.</p>
+                        <p>Applied transfer learning to classify 8,000+ e-commerce images, achieving 92% accuracy.</p>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-animation="zoom-in" style="transition-delay: 200ms;">
                         <h3>Uber Demand Forecasting</h3>
                         <p>Built RNN models on NYC ride data to predict hourly demand with an R-squared of 0.89.</p>
                     </div>
@@ -164,58 +143,23 @@
 
         <section id="skills">
             <div class="container">
-                <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+                <h2 data-animation="fade-up"><i class="fas fa-cogs"></i> Technical Skills</h2>
                 <div class="skills-container">
-                    <div class="skill-category">
+                    <div class="skill-category" data-animation="fade-left">
                         <h3>Programming</h3>
-                        <div class="skill-tags">
-                            <span>Python (Advanced)</span>
-                            <span>SQL (Advanced)</span>
-                            <span>LaTeX</span>
-                        </div>
+                        <div class="skill-tags"><span>Python (Advanced)</span><span>SQL (Advanced)</span></div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category" data-animation="fade-right">
                         <h3>Machine Learning & NLP</h3>
-                        <div class="skill-tags">
-                            <span>Scikit-learn</span>
-                            <span>PyTorch</span>
-                            <span>TensorFlow</span>
-                            <span>Hugging Face</span>
-                            <span>NumPy</span>
-                            <span>Pandas</span>
-                            <span>Matplotlib</span>
-                        </div>
+                        <div class="skill-tags"><span>Scikit-learn</span><span>PyTorch</span><span>TensorFlow</span><span>Hugging Face</span></div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category" data-animation="fade-left">
                         <h3>LLM Tools</h3>
-                        <div class="skill-tags">
-                            <span>LangChain</span>
-                            <span>VLLM</span>
-                            <span>TGI</span>
-                            <span>MLflow</span>
-                        </div>
+                        <div class="skill-tags"><span>LangChain</span><span>VLLM</span><span>TGI</span><span>MLflow</span></div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Databases & Data Engineering</h3>
-                        <div class="skill-tags">
-                            <span>Elasticsearch</span>
-                            <span>Neo4j</span>
-                            <span>SQL Server</span>
-                            <span>Web Scraping</span>
-                            <span>BeautifulSoup</span>
-                            <span>Scrapy</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>DevOps & Tools</h3>
-                        <div class="skill-tags">
-                            <span>Git</span>
-                            <span>Docker</span>
-                            <span>Linux</span>
-                            <span>FastAPI</span>
-                            <span>Jupyter Notebook</span>
-                            <span>VS Code</span>
-                        </div>
+                    <div class="skill-category" data-animation="fade-right">
+                        <h3>Databases & DevOps</h3>
+                        <div class="skill-tags"><span>Elasticsearch</span><span>Neo4j</span><span>SQL Server</span><span>Docker</span><span>Git</span><span>FastAPI</span></div>
                     </div>
                 </div>
             </div>
@@ -223,11 +167,10 @@
 
         <section id="honors">
             <div class="container">
-                <h2><i class="fas fa-trophy"></i> Honors & Awards</h2>
+                <h2 data-animation="fade-up"><i class="fas fa-trophy"></i> Honors & Awards</h2>
                 <ul>
-                    <li>Ranked 77th in the Iranian nationwide M.Sc. entrance exam (2018)</li>
-                    <li>Ranked in the top 1% in the Iranian B.Sc. national entrance exam (2011)</li>
-                    <li>National participant in RoboCup 2D Soccer Simulation League (2009)</li>
+                    <li data-animation="fade-right">Ranked 77th in the Iranian nationwide M.Sc. entrance exam (2018)</li>
+                    <li data-animation="fade-right" style="transition-delay: 100ms;">Ranked in the top 1% in the Iranian B.Sc. national entrance exam (2011)</li>
                 </ul>
             </div>
         </section>

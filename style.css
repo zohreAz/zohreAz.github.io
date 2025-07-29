@@ -57,6 +57,7 @@ ul {
 
 section {
     padding: 6rem 0;
+    overflow-x: hidden; /* Prevents horizontal scrollbar during animations */
 }
 
 /* --- Navigation --- */
@@ -92,7 +93,7 @@ nav {
 .nav-links a {
     color: var(--secondary-color);
     font-weight: 400;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -102,7 +103,6 @@ nav {
 
 /* --- Header --- */
 header {
-    /* The dark overlay is now based on our new black/grey color */
     background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url('AI.jpg') center/cover no-repeat;
     color: white;
     height: 100vh;
@@ -132,15 +132,6 @@ header {
 .social-links a:hover {
     transform: scale(1.2);
     color: var(--primary-color);
-}
-
-/* --- About Section --- */
-#about p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
 
 /* --- Timeline (Experience & Education) --- */
@@ -235,12 +226,9 @@ header {
 
 /* --- Skills Section --- */
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-}
-.skill-category {
-    flex: 1 1 300px;
 }
 .skill-category h3 { color: var(--secondary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem; }
 .skill-tags {
@@ -250,7 +238,6 @@ header {
 }
 
 .skill-tags span {
-    /* Updated skill tag colors to fit the new theme */
     background-color: #e6e6e6; 
     color: var(--secondary-color);
     padding: 0.5rem 1rem;
@@ -260,9 +247,6 @@ header {
 }
 
 /* --- Honors Section --- */
-#honors ul {
-    list-style-type: none;
-}
 #honors li {
     background: var(--surface-color);
     margin-bottom: 1rem;
@@ -286,42 +270,71 @@ footer {
     text-align: center;
     padding: 4rem 0 2rem;
 }
-
 footer h2 { color: white; border: none; }
-footer p { max-width: 600px; margin-left: auto; margin-right: auto; }
-footer .social-links {
-    margin: 2rem 0;
-}
-footer .social-links a {
-    color: #ccc;
-    font-size: 1.2rem;
-    margin: 0 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-}
-footer .social-links a:hover {
-    color: var(--primary-color);
-}
-footer .copyright {
-    font-size: 0.9rem;
-    margin-top: 2rem;
-    color: #888;
-}
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 1.8rem; }
-    
     .nav-container { flex-direction: column; height: auto; padding: 1rem 0;}
     .nav-links { margin-top: 1rem; }
-
     header { height: 80vh; }
     section { padding: 4rem 0; }
-    
     .timeline::after { left: 10px; }
     .timeline-item { padding-left: 2.5rem; }
     .timeline-dot { left: 0; }
+}
+
+/* --- JAVASCRIPT ACTION STYLES --- */
+
+/* 1. Scroll Animation Styles */
+[data-animation] {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+[data-animation="fade-up"] { transform: translateY(40px); }
+[data-animation="fade-right"] { transform: translateX(-40px); }
+[data-animation="fade-left"] { transform: translateX(40px); }
+[data-animation="zoom-in"] { transform: scale(0.9); }
+[data-animation].visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* 2. Active Navigation Link Style */
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* 3. Back to Top Button Styles */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    z-index: 1000;
+}
+
+#back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top-btn:hover {
+    background-color: var(--secondary-color);
 }
