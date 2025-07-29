@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    img.profile {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #eee;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    p.description {
+      font-weight: 300;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #bbb;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .social-links a {
+      color: #eee;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #0af;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p.description {
+        font-size: 1rem;
+      }
+
+      img.profile {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pV7VZn5PJRhI+zHT4gYVzIt6EVmR98SsjP3q5Vb2m1Ht29eJduXR4e3T0FevH6TfB0jWJ9WQ95G3d0Ea28KjIw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <img src="https://via.placeholder.com/160" alt="Your Name" class="profile" />
+  <h1>Your Name</h1>
+  <p class="description">Your brief bio or description goes here.</p>
+
+  <div class="social-links">
+    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"
+      ><i class="fab fa-github"></i
+    ></a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn"
+      ><i class="fab fa-linkedin"></i
+    ></a>
+    <a href="mailto:your.email@example.com" aria-label="Email"
+      ><i class="fas fa-envelope"></i
+    ></a>
+    <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter"
+      ><i class="fab fa-twitter"></i
+    ></a>
+  </div>
+</body>
+</html>
+
