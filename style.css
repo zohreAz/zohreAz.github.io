@@ -338,3 +338,16 @@ footer h2 { color: white; border: none; }
 #back-to-top-btn:hover {
     background-color: var(--secondary-color);
 }
+#about .about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#about .about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+
